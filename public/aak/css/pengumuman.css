@@ -1,0 +1,99 @@
+.content{
+    padding-top: 20px;
+    min-height: 70vh;
+    padding-bottom: 100px;
+}
+.title-1{
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 46px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+.title-desc{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #000000;
+    max-width: 554px;
+}
+
+.decor{
+    height: 18vh;
+    width: 100%;
+    background-color: #6060D0;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.image-float{
+    position: absolute;
+    top: 20%;
+    right: 0;
+    width: 45%;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+}
+.img-1{
+    width: 65%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-right: auto;
+}
+.img-2{
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px 0 0 18px;
+}
+.sm-title{
+    display: none;
+}
+.pengumuman .button-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.pengumuman .button-group .btn {
+    border-color: #f5f5f5;
+    text-align: left;
+    padding: 18px;
+    margin-bottom: 10px;
+    width: 80%;
+    position: relative;
+}
+.pengumuman .button-group .btn strong {
+    color: #000000;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+}
+.pengumuman .button-group .btn p {
+    font-size: 12px;
+    line-height: 28px;
+    color: #a2a2a2;
+    margin-bottom: 0;
+    text-align: left;
+}
+.btn .badge {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    background-color: #EBEBFF;
+    color: #6060D0;
+    font-size: 12px;
+    padding: 4px 8px;
+}
+.more a {
+    position: absolute;
+    left: 64%;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+}

@@ -17,6 +17,6 @@ class PengumumanPageController extends Controller
                             ORDER BY p.created_at desc
                             LIMIT 10');
 
-        return view('pengumuman',compact('data'));
+        return view('aak.pengumuman_aak',compact('data'));
     }
 }

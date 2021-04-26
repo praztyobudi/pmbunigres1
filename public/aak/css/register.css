@@ -1,0 +1,87 @@
+.content{
+    padding-top: 20px;
+}
+.title-1{
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 46px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+.title-desc{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #000000;
+    max-width: 554px;
+}
+
+.btn-daftar{
+    width: 224px;
+    padding: 14px 26px;
+    background: #1bb394;
+    color: #f3f3f4;
+}
+.btn-daftar:hover{
+    box-shadow: rgba(27, 179, 149, 0.2) 0px 4px 8px 0px, rgba(27, 179, 149, 0.23) 0px 6px 20px 0px;
+    color: rgb(255, 255, 255) !important;
+    outline: 0px !important;
+    background: rgb(27, 179, 148) !important
+}
+.decor{
+    height: 18vh;
+    width: 100%;
+    background-color: #6060D0;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.image-float{
+    position: absolute;
+    top: 20%;
+    right: 0;
+    width: 45%;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+}
+.img-1{
+    width: 65%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-right: auto;
+}
+.img-2{
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px 0 0 18px;
+}
+.sm-title{
+    display: none;
+}
+.wrapper-button{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.wrapper-button .btn-home:nth-child(1){
+    margin-right: 20px;
+}
+
+
+.register-form-group .form-group .form-control{
+    background: #f3f3f4;
+    border: none;
+    height: 52px;
+    width: 70%;
+}
+.password{
+    position: relative;
+}
+.catatan{
+    margin-bottom: 120px;
+}

@@ -1,0 +1,66 @@
+.wrapper-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+.logo{
+    width: 100px;
+    margin-bottom: 20px;
+}
+.title-1{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #251462;
+}
+.title-2{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #251462;
+}
+.title-3{
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #000000;
+    margin-bottom: 28px;
+}
+.wrapper-content form{
+    display: flex;
+    flex-direction: column;
+}
+.wrapper-input .form-group input{
+    background: #f3f3f4;
+    border: none;
+    height: 52px;
+}
+.btn-login{
+    font-size: 16px;
+    width: 224px;
+    border-radius: 4px;
+    padding: 14px 26px;
+    background: #1bb394;
+    color: #ffffff;
+    margin-right: auto;
+    margin-left: auto;
+}
+.daftar{
+    text-align: center;
+}
+.daftar a{
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #1bb394;
+}
+.daftar a:hover{
+    text-decoration: none;
+    color: #1bb394;
+}

@@ -19,15 +19,15 @@
 
     @yield('css')
 
-    <title>Unigres</title>
+    <title>AAK Delima Husada</title>
 </head>
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-light second-nav dashboard">
     <div class="main-container">
         <a class="navbar-brand" href="{{ route('homepage') }}">
-            <img class="logo-brand" src="{{ asset('unigres/images/logo.png') }}">
-            <p>PMB.<span>Unigres</span></p>
+            <img width="40px" src="{{ asset('aak/images/logo.png') }}">
+            <p>PMB.<span>AAK Delima Husada</span></p>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"

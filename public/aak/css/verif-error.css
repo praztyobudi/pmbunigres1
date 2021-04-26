@@ -1,0 +1,42 @@
+.wrapper-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+.title-selamat{
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+    color: #251462;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.list-flow{
+    padding: 15px 32px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    color: #000000;
+    background-color: #F2FAFF;
+    border-radius: 4px;
+    text-align: left;
+    max-width: 660px;
+    margin-bottom: 45px;
+}
+.wrapper-content .btn-login{
+    font-size: 16px;
+    width: 224px;
+    margin-right: 4px;
+    border-radius: 4px;
+    padding: 14px 26px;
+    background: #1bb394;
+    color: #ffffff;
+}
+.wrapper-content .btn-login:hover{
+    outline: 0 !important;
+    box-shadow: 0 4px 8px 0 rgba(27, 179, 149, 0.199), 0 6px 20px 0 rgba(27, 179, 149, 0.233);
+    background: #1bb394 !important;
+    color: #ffffff !important;
+}

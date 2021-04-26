@@ -1,0 +1,709 @@
+.sub-nav{
+    height: 84px;
+}
+
+.sub-nav .sub-nav-collapse {
+    flex-direction: column;
+  }
+  
+  .sub-nav .sub-nav-collapse .navbar-nav {
+    align-items: center;
+  }
+  
+  .sub-nav .sub-nav-collapse .navbar-nav p {
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  .outer-nav{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  }
+  .bg-ic{
+      background-color: #DCDCDC;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #ffffff;
+  }
+  .sub-sub-nav .active .bg-ic{
+      background-color: #6060D0;
+  }
+  .sub-sub-nav .active{
+      color: #251462 !important;
+  }
+  .aksen{
+      width: 1px;
+      background-color: #DCDCDC;
+      height: 40px;
+      margin: 0 20px;
+  }
+
+  .dashboard-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .dropdown-acount-1{
+    background-color: #CECEFF;
+    color: #6060D0 !important;
+    padding-left: 10px !important;
+    padding-right: 0px !important;
+    border-radius: 20px;
+  }
+  .dropdown-acount-1:hover{
+      background-color: #ebebff;
+  }
+  .dropdown-acount-1 .nav-link{
+      color: #6060D0 !important;
+  }
+  .dashboard-user h4 {
+    margin-top: 46px;
+    margin-bottom: 18px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #251462;
+  }
+  
+  .dashboard-user p {
+    margin-bottom: 46px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #a2a2a2;
+  }
+  
+  .dashboard-user .nav-pills {
+    background: #f3f3f429;
+    border-radius: 6px;
+    border: 1px solid #f3f3f4;
+  }
+  
+  .dashboard-user .nav-pills a:hover {
+    color: #6c757d;
+  }
+  
+  .dashboard-user .nav-pills .nav-item .nav-link {
+    color: #a2a2a2;
+    padding: 15px 47px;
+  }
+  
+  .dashboard-user .nav-pills .nav-item .nav-link.active {
+    padding: 15px 47px;
+    color: #fff;
+    background-color: #6060D0;
+    border-radius: 6px;
+  }
+  
+  .dashboard-user .tab-content {
+    width: 100%;
+  }
+  
+  .dashboard-user .tab-content .data-calon-mhs .row .left .card .card-header {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    color: #251462 !important;
+  }
+  
+  .dashboard-user .tab-content .data-calon-mhs .row .left .card .card-body {
+    padding: 35px;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-calon-mhs
+    .row
+    .left
+    .card
+    .card-body
+    .form-group
+    .row-form {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-calon-mhs
+    .row
+    .left
+    .card
+    .card-body
+    .form-group
+    .row-form
+    .col-md-6 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-calon-mhs
+    .row
+    .left
+    .card
+    .card-body
+    ::-webkit-input-placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #8f8e94;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-calon-mhs
+    .row
+    .left
+    .card
+    .card-body
+    ::-moz-placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #8f8e94;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-calon-mhs
+    .row
+    .left
+    .card
+    .card-body
+    :-ms-input-placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #8f8e94;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-calon-mhs
+    .row
+    .left
+    .card
+    .card-body
+    ::-ms-input-placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #8f8e94;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-calon-mhs
+    .row
+    .left
+    .card
+    .card-body
+    ::placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #8f8e94;
+  }
+  
+  .radio-button .custom-radio label{
+    margin: 0 !important;
+}
+  .dashboard-user .tab-content .data-calon-mhs .row .left .card .card-body label {
+    margin-top: 20px;
+    padding-left: 8px;
+    width: 100%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-calon-mhs
+    .row
+    .left
+    .card
+    .card-body
+    .radio-button {
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+    width: 100%;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-calon-mhs
+    .row
+    .left
+    .card
+    .card-body
+    .radio-button
+    .form-check-inline {
+    padding-left: 20px;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-calon-mhs
+    .row
+    .left
+    .card
+    .card-body
+    .radio-button
+    .form-check-inline
+    label {
+    width: 100%;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #8f8e94;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-calon-mhs
+    .row
+    .left
+    .card
+    .card-body
+    .form-control {
+    background: #f3f3f4;
+    border: none;
+    height: 52px;
+  }
+  
+  .dashboard-user .tab-content .data-calon-mhs .row .left .btn-light:hover,
+  .dashboard-user .tab-content .data-calon-mhs .row .left .btn-light:focus,
+  .dashboard-user .tab-content .data-calon-mhs .row .left .btn-light:active,
+  .dashboard-user .tab-content .data-calon-mhs .row .left .btn-light.active {
+    outline: 0 !important;
+    box-shadow: 0 4px 8px 0 rgba(27, 179, 149, 0.199),
+      0 6px 20px 0 rgba(27, 179, 149, 0.233);
+    background: #14a789 !important;
+    color: #ffffff !important;
+  }
+  
+  
+  .dashboard-user .tab-content .data-calon-mhs .row .left .catatan {
+    margin-top: 28px;
+    margin-left: 18px;
+    margin-bottom: 10em;
+  }
+  
+  
+  .dashboard-user .tab-content .data-calon-mhs .row .right .card .card-header {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    color: #251462 !important;
+  }
+  
+  .dashboard-user .tab-content .data-calon-mhs .row .right .card .card-body {
+    padding: 35px;
+    margin-top: 20px;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-calon-mhs
+    .row
+    .right
+    .card
+    .card-body
+    .card-img-top {
+    width: 60%;
+    margin-bottom: 28px;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-calon-mhs
+    .row
+    .right
+    .card
+    .card-body
+    .btn-file {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 38px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-calon-mhs
+    .row
+    .right
+    .card
+    .card-body
+    .btn-file
+    .custom-file-input {
+    position: absolute;
+    z-index: 2;
+    width: 20%;
+    height: 2em;
+    margin: 0;
+    opacity: 0;
+  }
+  
+  
+
+
+
+  .dashboard-user .tab-content .data-orang-tua .row {
+    justify-content: center;
+  }
+.dashboard-user .tab-content .data-orang-tua .row .left form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dashboard-user .tab-content .data-orang-tua .row .left form .card {
+    width: 100%;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-orang-tua
+    .row
+    .left
+    form
+    .card
+    .card-header {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    color: #251462 !important;
+  }
+  
+  .dashboard-user .tab-content .data-orang-tua .row .left form .card .card-body {
+    padding: 35px;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-orang-tua
+    .row
+    .left
+    form
+    .card
+    .card-body
+    .form-group
+    .row-form {
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-orang-tua
+    .row
+    .left
+    form
+    .card
+    .card-body
+    .form-group
+    .row-form
+    .col-md-6 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-orang-tua
+    .row
+    .left
+    form
+    .card
+    .card-body
+    ::-webkit-input-placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #8f8e94;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-orang-tua
+    .row
+    .left
+    form
+    .card
+    .card-body
+    ::-moz-placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #8f8e94;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-orang-tua
+    .row
+    .left
+    form
+    .card
+    .card-body
+    :-ms-input-placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #8f8e94;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-orang-tua
+    .row
+    .left
+    form
+    .card
+    .card-body
+    ::-ms-input-placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #8f8e94;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-orang-tua
+    .row
+    .left
+    form
+    .card
+    .card-body
+    ::placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #8f8e94;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-orang-tua
+    .row
+    .left
+    form
+    .card
+    .card-body
+    label {
+    margin-top: 20px;
+    width: 100%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+  }
+  
+  .dashboard-user
+    .tab-content
+    .data-orang-tua
+    .row
+    .left
+    form
+    .card
+    .card-body
+    .form-control {
+    background: #f3f3f4;
+    border: none;
+    height: 52px;
+  }
+  
+  .dashboard-user .tab-content .data-orang-tua .row .left .btn-light:hover,
+  .dashboard-user .tab-content .data-orang-tua .row .left .btn-light:focus,
+  .dashboard-user .tab-content .data-orang-tua .row .left .btn-light:active,
+  .dashboard-user .tab-content .data-orang-tua .row .left .btn-light.active {
+    outline: 0 !important;
+    box-shadow: 0 4px 8px 0 rgba(27, 179, 149, 0.199),
+      0 6px 20px 0 rgba(27, 179, 149, 0.233);
+    background: #14a789 !important;
+    color: #ffffff !important;
+  }
+  
+  .dashboard-user .tab-content .data-orang-tua .row .left button {
+    margin-top: 20px;
+    font-size: 16px;
+    width: 224px;
+    margin-right: 4px;
+    border-radius: 4px;
+    padding: 14px 26px;
+    background: #1bb394;
+    color: #ffffff;
+  }
+  
+  .dashboard-user .tab-content .data-orang-tua .row .left .catatan {
+    margin-top: 28px;
+    margin-left: 18px;
+    margin-bottom: 10em;
+    text-align: center;
+  }
+  
+  .dashboard-user .tab-content .data-orang-tua .row .left .catatan strong {
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+  }
+  
+  .dashboard-user .tab-content .data-orang-tua .row .left .catatan p {
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #8f8e94;
+    text-align: left;
+    text-align: center;
+  }
+  
+  .dashboard-user .tab-content .program-studi .row {
+    justify-content: center;
+  }
+  .dashboard-user .tab-content .program-studi .row .left form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dashboard-user .tab-content .program-studi .row .left .btn-light:hover,
+  .dashboard-user .tab-content .program-studi .row .left .btn-light:focus,
+  .dashboard-user .tab-content .program-studi .row .left .btn-light:active,
+  .dashboard-user .tab-content .program-studi .row .left .btn-light.active {
+    outline: 0 !important;
+    box-shadow: 0 4px 8px 0 rgba(27, 179, 149, 0.199),
+      0 6px 20px 0 rgba(27, 179, 149, 0.233);
+    background: #14a789 !important;
+    color: #ffffff !important;
+  }
+  
+  .dashboard-user .tab-content .program-studi .row .left button {
+    margin-top: 20px;
+    font-size: 16px;
+    width: 224px;
+    margin-right: 4px;
+    border-radius: 4px;
+    padding: 14px 26px;
+    background: #1bb394;
+    color: #ffffff;
+  }
+  
+  .dashboard-user .tab-content .program-studi .row .left .catatan {
+    margin-top: 28px;
+    margin-left: 18px;
+    margin-bottom: 10em;
+    text-align: center;
+  }
+  
+  .dashboard-user .tab-content .program-studi .row .left .catatan strong {
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+  }
+  
+  .dashboard-user .tab-content .program-studi .row .left .catatan p {
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #8f8e94;
+    text-align: left;
+    text-align: center;
+  }
+
+
+  .group-betwen{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .group-betwen label{
+      width: 70%;
+  }
+  .dashboard-user .informasi .row .left {
+    margin-bottom: 6em;
+}
+.dashboard-user .informasi .row .left .button-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dashboard-user .informasi .row .left .button-group .btn {
+    border-color: #f5f5f5;
+    text-align: left;
+    padding: 18px;
+    margin-bottom: 10px;
+    width: 60%;
+    position: relative;
+}
+.dashboard-user .informasi .row .left .button-group .btn strong {
+    color: #000000;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+}
+.dashboard-user .informasi .row .left .button-group .btn p {
+    font-size: 12px;
+    line-height: 28px;
+    color: #a2a2a2;
+    margin-bottom: 0;
+    text-align: left;
+}
+.dashboard-user .informasi .row .left .button-group .more a {
+    position: absolute;
+    right: 21%;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: #6060D0;
+    text-decoration: none;
+}
+.btn .badge {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    background-color: #EBEBFF;
+    color: #6060D0;
+    font-size: 12px;
+    padding: 4px 8px;
+}

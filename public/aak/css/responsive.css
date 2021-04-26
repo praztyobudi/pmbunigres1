@@ -1,0 +1,317 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /* .navbar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    } */
+    .image-float{
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-top: -30px;
+        height: 160px;
+    }
+    .img-1{
+        width: 90%;
+        margin: auto;
+    }
+    .img-2{
+        display: none;
+    }
+    .lg-title{
+        display: none;
+    }
+    .sm-title{
+        display: block;
+    }
+    .title-1{
+        font-size: 18px;
+        margin-bottom: 12px;
+        color: #B4B4B4;
+    }
+    .wrap {
+        font-size: 14px;
+    }
+    .wrap span{
+        display: block;
+    }
+    .bottom {
+        position: relative !important;
+    }
+    .decor {
+        height: 50px;
+    }
+    .wrapper-button .btn-home:nth-child(1){
+        margin-bottom: 16px;
+        margin-right: 0;
+    }
+    .wrapper-button{
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+    .wrapper-row{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .wrapper-row i{
+        display: none;
+    }
+    .copy-right{
+        text-align: center;
+    }
+    .navbar-light .login{
+        background-color: transparent;
+        color: #FFFFFF !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .register-form-group .form-group .form-control{
+        width: 100%;
+    }
+    .register-form-group{
+        text-align: center;
+    }
+    .navbar-white .login{
+        background-color: transparent;
+        color: #6060D0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+
+
+    /* PAGE VERIF */
+    .ic-success{
+        width: 80px;
+    }
+    .title-selamat{
+        text-align: center;
+    }
+    .list-flow{
+        font-size: 15px;
+    }
+
+    /* DASHBOARD */
+    .dropdown-acount{
+        position: absolute !important;
+    }
+    .sub-nav .sub-nav-collapse {
+        align-items: center;
+        display: flex;
+      }
+      .outer-nav{
+          display: flex;
+          flex-direction: column;
+      }
+      .bg-ic{
+          margin-bottom: 8px;
+      }
+      .sub-nav .sub-nav-collapse .navbar-nav p {
+        padding-left: 0;
+    }
+      .sub-nav .sub-nav-collapse .navbar-nav {
+        flex-direction: row;
+      }
+    
+      .sub-nav .sub-nav-collapse .navbar-nav p {
+        font-size: 10px;
+      }
+    
+      .sub-nav .sub-nav-collapse .navbar-nav p #pembayaran {
+        padding: 7.8px 9px !important;
+        margin-right: 0;
+      }
+    
+      .sub-nav .sub-nav-collapse .navbar-nav p #informasi {
+        padding: 6.3px 14px !important;
+        font-size: 12px;
+      }
+    
+      .dashboard-user .nav-pills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .dashboard-user .tab-content .data-calon-mhs .row .left .card .card-body {
+        padding: 20px;
+      }
+    
+      .dashboard-user .tab-content .data-calon-mhs .row .left .card .card-body .form-group .row-form .col-md-6 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    
+      .dashboard-user .tab-content .data-calon-mhs .row .left .card .card-body label {
+        width: 100%;
+      }
+    
+      .form-group {
+        margin-bottom: 0;
+      }
+    
+      .dashboard-row {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    
+      .dashboard-right {
+        margin-bottom: 20px;
+      }
+      .radio-button .custom-radio label{
+          margin: 0 !important;
+      }
+    
+      .text-left {
+        text-align: left !important;
+        font-size: 14px;
+      }
+    
+      .dashboard-user .tab-content .data-calon-mhs .row .right .card .card-body {
+        padding: 20px;
+        margin-top: 20px;
+      }
+    
+      .dashboard-user .tab-content .data-calon-mhs .row .left .card .card-body .form-control {
+        margin: 0 !important;
+      }
+
+    .row-form .col-md-6{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .dashboard-user .tab-content .data-orang-tua .row .left .card .card-body {
+        padding: 20px !important;
+    }
+
+
+    .dashboard-user .informasi .row .left .button-group .btn {
+        border-color: #f5f5f5;
+        text-align: left;
+        padding: 18px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .button-group-9 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .button-group-9 a {
+        margin-bottom: 12px;
+    }
+
+
+    .dashboard-user .informasi .row .left .button-group .more a {
+        right: 15px;
+    }
+    .pengumuman .button-group .more a {
+        right: 15px;
+        left: auto;
+    }
+    .pengumuman .button-group .btn {
+        width: 100%;
+    }
+    .dashboard-user .nav-pills .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .wrapper-time{
+        width: 45%;
+        margin-bottom: 30px;
+    }
+    .wrapper-spar {
+        width: 10%;
+    }
+    .wrapper-spar:nth-child(4){
+        display: none;
+    }
+    .wrapper-time h1 {
+        font-size: 48px;
+        padding: 16px;
+    }
+    .img-not-found{
+        max-width: 70%;
+    }
+    .ct-not-found{
+        min-height: 80vh;
+        padding-top: 100px;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media  (min-width: 600px) and (max-width:992px){
+    .float {
+        position: relative;
+    }
+    .wrap {
+        font-size: 14px;
+    }
+    .wrap span{
+        display: block;
+    }
+    .bottom {
+        position: relative !important;
+    }
+    
+    .title-1-sm{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 20px;
+        display: block !important;
+    }.decor {
+        height: 50px;
+    }
+    .title-1{
+        display: none;
+    }
+    .btn-home{
+        margin-bottom: 16px;
+    }
+    .wrapper-button{
+        margin-bottom: 50px;
+    }
+    .wrapper-row{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .wrapper-row i{
+        display: none;
+    }
+    .copy-right{
+        text-align: center;
+    }
+    
+    .login{
+        background-color: transparent;
+    color: #FFFFFF !important;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1440px) {
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1600px) {
+    
+}

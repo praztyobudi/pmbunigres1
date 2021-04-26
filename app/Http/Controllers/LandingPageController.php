@@ -23,7 +23,7 @@ class LandingPageController extends Controller
                             ORDER BY p.created_at desc
                             LIMIT 2');
 
-        return view('welcome',compact('data'));
+        return view('masteraak-page',compact('data'));
     }
 
     /**

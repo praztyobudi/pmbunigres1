@@ -1,0 +1,23 @@
+.ct-wrapp{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.not-found{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #6060D0;
+}
+.desc-not-found{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #000000;
+    max-width: 450px;
+}

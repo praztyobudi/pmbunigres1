@@ -56,7 +56,7 @@ class TesAkademikController extends Controller
             $res = Http::post($moodleUrl . "webservice/rest/server.php?wstoken=$moodleToken&wsfunction=auth_email_signup_user&moodlewsrestformat=json&username=$username&email=$email&password=$password&firstname=$firstname&lastname=$lastname");
             $response = json_decode($res->body());
 
-            if($response->success) {
+            if(isset($response->success) && $response->success) {
                 $res = Http::post($moodleUrl . "webservice/rest/server.php?wstoken=$moodleToken&wsfunction=core_user_get_users&moodlewsrestformat=json&criteria[0][key]=username&criteria[0][value]=$username");
                 $response = json_decode($res->body());
                 $userData = $response->users[0];
@@ -77,7 +77,7 @@ class TesAkademikController extends Controller
                 } else return false;
             } else abort(503);
         } catch (\Exception $e) {
-            dd($e->getMessage());
+            //dd($e->getMessage());
             abort(500);
         }
     }

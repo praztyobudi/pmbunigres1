@@ -131,28 +131,39 @@
                                         @endif
                                     </div>
                                     <div class="col-lg-6">
-                                        <label class="form-label lable-radio mb-3">Jenis Kelamin</label>
-                                        <div class="wrap-input">
-                                            <div class="form-check form-check-inline">
-                                                <input type="radio" name="jenis_kelamin" id="jk_lakilaki"
-                                                    class="form-check-input @if($errors->has('jenis_kelamin')) is-invalid @endif"
-                                                    value="laki-laki" @if(empty($data) ||
-                                                    $data->jenis_kelamin == 'laki-laki' ||
-                                                old('jenis_kelamin') == 'laki-laki') checked @endif>
-                                                <label class="form-check-label"
-                                                    for="jk_lakilaki">Laki-Laki</label>
+                                        <label>Jenis Kelamin</label>
+                                        <select name="jenis_kelamin" id="jenis_kelamin"
+                                                class="form-control @if($errors->has('jenis_kelamin')) is-invalid @endif"
+                                                required>
+                                            <option value="" selected disabled>--- Pilih Jenis Kelamin ---</option>
+                                            <option value="laki-laki" @if(empty($data) || $data->jenis_kelamin ==
+                                                'laki-laki' || old('jenis_kelamin') == 'laki-laki') selected @endif>Laki-laki
+                                            </option>
+                                            <option value="perempuan" @if((!empty($data) && $data->jenis_kelamin ==
+                                                'perempuan') || old('jenis_kelamin') == 'perempuan') selected
+                                                @endif>Perempuan</option>
+                                        </select>
+                                        @if($errors->has('jenis_kelamin'))
+                                            <div class="invalid-feedback">
+                                                <strong>{{ $errors->first('agama') }}</strong>
                                             </div>
-                                            <div class="form-check form-check-inline">
-                                                <input type="radio" name="jenis_kelamin" id="jk_perempuan"
-                                                    class="form-check-input @if($errors->has('jenis_kelamin')) is-invalid @endif"
-                                                    value="perempuan" @if((!empty($data) &&
-                                                    $data->jenis_kelamin == 'perempuan') ||
-                                                old('jenis_kelamin') == 'perempuan') checked @endif>
-                                                <label class="form-check-label"
-                                                    for="jk_perempuan">Perempuan</label>
-                                            </div>
-                                        </div>
+                                        @endif
                                     </div>
+                                </div>
+                                <div class="form-group d-none" id="hijab">
+                                    <label for="hijab" class="ml-2">Orientasi Seragam</label>
+                                    <select name="hijab" id="hijab" class="mb-0 form-control @error('hijab') is-invalid @enderror">
+                                        <option value="false" selected>Tidak Berhijab</option>
+                                        <option value="true">Berhijab</option>
+                                    </select>
+                                    <div class="mb-2">
+                                        <small style="font-size: .70em" class="form-text text-muted">Digunakan untuk menentukan seragam.</small>
+                                    </div>
+                                    @error('hijab')
+                                    <div class="invalid-feedback">
+                                        <strong>{{ $message }}</strong>
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="alamat" class="ml-2">Alamat</label>
@@ -163,11 +174,9 @@
                                         <strong>{{ $errors->first('alamat') }}</strong>
                                     </div>
                                     @endif
-                                    {{-- <input type="text" name="alamat" required="" class="form-control" placeholder="Alamat Tinggal"> --}}
                                 </div>
                                 <div class="form-group">
                                     <label for="telepon" class="ml-2">No. Telepon</label>
-                                    {{-- <input type="tel" name="telepon" required="" class="form-control" placeholder="Contoh: 085807217211"> --}}
                                     <input type="text" name="no_telepon" id="no_telepon"
                                         class="form-control @if($errors->has('no_telepon')) is-invalid @endif"
                                         value="{{ $data->no_telepon ?? old('no_telepon') }}" required>
@@ -314,3 +323,18 @@
     </div>
 </div>
 @endsection
+
+@push('js')
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <script>
+        let jenisKelamin = $('#jenis_kelamin');
+        let hijab = $('#hijab');
+
+        jenisKelamin.change(function(){
+            hijab.toggleClass('d-none');
+        });
+    </script>
+@endpush

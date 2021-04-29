@@ -43,7 +43,8 @@ class BiodataController extends Controller
             'foto' => 'required_without:current_foto|file|max:250|mimes:png,jpg,jpeg', // maks ukuran dalam KB
             'current_foto' => 'present',
             'informasi' => 'required|in:sosial_media,teman_saudara,lainnya',
-            'asal_informasi' => 'required|string'
+            'asal_informasi' => 'required|string',
+            'hijab' => 'required_if:jenis_kelamin,perempuan'
         ]);
         try {
             $berkas = $request->file('foto');
@@ -78,7 +79,8 @@ class BiodataController extends Controller
                 'ukuran_almamater' => $data['ukuran_almamater'],
                 'foto' => $berkasName,
                 'informasi' => $data['informasi'],
-                'asal_informasi' => $data['asal_informasi']
+                'asal_informasi' => $data['asal_informasi'],
+                'hijab' => $data['hijab']
             ]);
 
             return response()->redirectToRoute('keluarga.create')->with(['status' => 'success', 'message' => 'Data biodata berhasil disimpan.']);

@@ -35,7 +35,7 @@
     <img class="float img-2" src="{{ asset('aak/images/img4.jpg') }}" alt="">
 </div>
 <section class="content">
-    
+
     <div class="container">
         <h3 class="title-1 sm-title">Registrasi</h3>
         <p class="title-desc mb-4">Isi form berikut dengan menggunakan data yang valid (Benar).</p>
@@ -43,14 +43,11 @@
             <form action="{{ route('register') }}" class="register-form-group mb-4" method="POST">
                 @csrf
                 @method('POST')
-               
-                    
                     @if(session()->has('status'))
                         <div class="alert alert-{{ session()->get('status') }}">
                             {{ session()->get('message') }}
                         </div>
                     @endif
-                   
                         <div class="form-group">
                             <input type="text" id="nama" name="nama" class="form-control @if($errors->has('nama')) is-invalid @endif" placeholder="Nama lengkap" value="{{ old('nama') }}" required>
                             @if($errors->has('nama'))
@@ -67,8 +64,6 @@
                                 </div>
                             @endif
                         </div>
-                    
-                   
                         <div class="form-group">
                             <select name="prodi" id="prodi" class="form-control @if($errors->has('prodi')) is-invalid @endif" required>
                                 <option selected disabled>-- Silahkan Pilih Program Studi --</option>
@@ -76,24 +71,6 @@
                             @if($errors->has('prodi'))
                                 <div class="invalid-feedback">
                                     <strong>{{ $errors->first('prodi') }}</strong>
-                                </div>
-                            @endif
-                        </div>
-                        <div class="form-group" id="lulusan">
-                            <label class="form-label lable-radio">Khusus Profesi</label>
-                            <div class="wrap-input" id="lulusan_unigres">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" @if(old('lulusan_unigres') == 1) checked @endif type="radio" name="lulusan_unigres" id="lulusan_unigres1" value="1" required>
-                                    <label class="form-check-label" for="inlineRadio1">Lulusan Unigres</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" @if(old('lulusan_unigres') == 0) checked @endif type="radio" name="lulusan_unigres" id="lulusan_unigres2" value="0" required>
-                                    <label class="form-check-label" for="inlineRadio2">Bukan Lulusan Unigres</label>
-                                </div>
-                            </div>
-                            @if($errors->has('lulusan_unigres'))
-                                <div class="invalid-feedback">
-                                    {{ $errors->first('lulusan_unigres') }}
                                 </div>
                             @endif
                         </div>
@@ -121,8 +98,6 @@
                                 </div>
                             @endif
                         </div>
-                    
-                    
                         <div class="form-group">
                             <input type="email" id="email" name="email" class="mb-0 form-control @if($errors->has('email')) is-invalid @endif" placeholder="Email" value="{{ old('email') }}" required>
                             @if($errors->has('email'))
@@ -145,23 +120,21 @@
                         <div class="form-group">
                             <input type="password" id="password_confirmation" name="password_confirmation" class="form-control @if($errors->has('password')) is-invalid @endif" placeholder="Konfirmasi Password" required>
                         </div>
-                   
+
                     <div class="wrapper-btn-form">
                         <div class="wrap-left">
-                            
+
                         </div>
                         <button type="submit" class="btn btn-light btn-daftar mt-3">Submit</button>
                     </div>
-               
+
             </form>
             <div class="catatan mt-3 mb-0">
                 <p>Catatan Jalur Masuk :</p>
-                                <ol class="note">
-                                    <li>Reguler (Murni dari SMK/SMA sederajat)</li>
-                                    <li>Transfer (Dari D3 melanjutkan ke S1)</li>
-                                    <li>Pindahan (Pindahan dari peguruan tinggi lain)</li>
-                                    <li>Lanjutan (Khusus Ners lulusan S.Keperawatan dari Unigres)</li>
-                                </ol>
+                <ol class="note">
+                    <li>Reguler (Murni dari SMK/SMA sederajat)</li>
+                    <li>Pindahan (Pindahan dari peguruan tinggi lain)</li>
+                </ol>
             </div>
         </div>
     </div>
@@ -183,7 +156,7 @@
             success:function(data){
                 $("#prodi").find('option').remove().end().append('<option selected disabled>-- Silahkan Pilih Program Studi --</option>');
                 $.each(data, function(){
-                    $("#prodi").append('<option  value="'+ this.id +'" data-lulusan-unigres="'+ this.lulusan_unigres +'">'+ this.jenjang + ' ' + this.prodi +'</option>')
+                    $("#prodi").append('<option  value="'+ this.id +'">'+ this.jenjang + ' ' + this.prodi +'</option>')
                 });
             }
         });
@@ -191,52 +164,18 @@
 
     $( document ).ready(function() {
         var p = prodi();
-        $("#lulusan").hide();
-        $('#lulusan_unigres2').prop( "checked", true );
-        //$('input[name="lulusan_unigres"]').attr("disabled",true);
-        //$('#lulusan_unigres1').attr("disabled",true);
 
         $("#prodi").change(function () {
             var prodi = $("#prodi option:selected" ).val();
-            var lulusan = $('input[name="lulusan_unigres"]:checked').val();
-            var checked_lulusan = $("#prodi option:selected" ).attr('data-lulusan-unigres');
-
-            console.log(checked_lulusan);
-            console.log(prodi);
-
-            if (checked_lulusan == 1) {
-                $("#lulusan").show();
-                //$('input[name="lulusan_unigres"]').attr("disabled",false);
-            } else {
-                $("#lulusan").hide();
-                //$('#lulusan_unigres1').attr("disabled",true);
-                // $('input[name="lulusan_unigres"]').attr("disabled",true);
-                $('#lulusan_unigres2').prop( "checked", true );
-            }
 
             $.ajax({
                 type:'GET',
-                url:'api/getjammasuk/' + prodi + '/' + lulusan,
+                url:'api/getjammasuk/' + prodi,
                 success:function(data){
+                    console.log(data);
                     $("#jamMasuk").find('option').remove().end().append('<option selected disabled>-- Silahkan Pilih Kelas --</option>');
                     $.each(data, function(){
                         $("#jamMasuk").append('<option  value="'+ this.jam_masuk_id +'" data-kelas="'+ this.id +'">'+ this.kelas + ' ' + ucwords(this.jam_masuk) +'</option>')
-                    });
-                }
-            });
-        });
-
-        $("#lulusan_unigres").change(function () {
-            var prodi = $("#prodi option:selected" ).val();
-            var lulusan = $('input[name="lulusan_unigres"]:checked').val();
-
-            $.ajax({
-                type:'GET',
-                url:'api/getjammasuk/' + prodi + '/' + lulusan,
-                success:function(data){
-                    $("#jamMasuk").find('option').remove().end().append('<option selected disabled>-- Silahkan Pilih Kelas --</option>');
-                    $.each(data, function(){
-                        $("#jamMasuk").append('<option  value="'+ this.jam_masuk_id +'" data-kelas="'+ this.id +'">'+ this.kelas + ' ' + this.jam_masuk +'</option>')
                     });
                 }
             });
@@ -253,11 +192,14 @@
                 success:function(data){
                     $("#jalur_masuk").find('option').remove().end().append('<option selected disabled>-- Silahkan Pilih Jalur Masuk --</option>');
                     $.each(data, function(){
-                        $("#jalur_masuk").append('<option  value="'+ this.jalur_masuk_id +'">'+ this.jalur_masuk +'</option>')
+                        $("#jalur_masuk").append('<option  value="'+ this.jalur_masuk_id +'">'+ ucwords(this.jalur_masuk) +'</option>')
                     });
                     if(!data) {
                         $("#jalur_masuk").append('<option disabled>Tidak ada gelombang pendaftaran yang terbuka.</option>')
                     }
+                },
+                fail:function(data, textStatus, jqXHR){
+                    console.log(data);
                 }
             });
         });

@@ -13,7 +13,7 @@ use Illuminate\Validation\Rule;
 class ProdiController extends Controller
 {
     public function index() {
-       $data = DB::select('SELECT p.id,CONCAT(\'Kode SIAKAD : \',p.kode_prodi_siakad,\' Kode NIM : \',p.kode_prodi_nim) AS kode,p.nama AS prodi,j.nama AS jenjang,IF(f.fakultas is NULL, \'-\',f.fakultas) AS fakultas, IF((SELECT COUNT(k.lulusan_unigres) FROM kelas k WHERE k.prodi_id = p.id AND k.lulusan_unigres = 1) > 0,1,0) AS lulusan_unigres
+       $data = DB::select('SELECT p.id,CONCAT(\'Kode SIAKAD : \',p.kode_prodi_siakad,\' Kode NIM : \',p.kode_prodi_nim) AS kode,p.nama AS prodi,j.nama AS jenjang,IF(f.fakultas is NULL, \'-\',f.fakultas) AS fakultas
                             FROM prodi p
                             LEFT OUTER JOIN jenjang j ON p.jenjang_id = j.id
                             LEFT OUTER JOIN fakultas f ON p.fakultas_id = f.id
@@ -50,7 +50,7 @@ class ProdiController extends Controller
 
     public function edit($id){
         $dataSelected = Prodi::find($id);
-        $data = DB::select('SELECT p.id,CONCAT(\'Kode SIAKAD : \',p.kode_prodi_siakad,\' Kode NIM : \',p.kode_prodi_nim) AS kode,p.nama AS prodi,j.nama AS jenjang,IF(f.fakultas is NULL, \'-\',f.fakultas) AS fakultas, IF((SELECT COUNT(k.lulusan_unigres) FROM kelas k WHERE k.prodi_id = p.id AND k.lulusan_unigres = 1) > 0,1,0) AS lulusan_unigres
+        $data = DB::select('SELECT p.id,CONCAT(\'Kode SIAKAD : \',p.kode_prodi_siakad,\' Kode NIM : \',p.kode_prodi_nim) AS kode,p.nama AS prodi,j.nama AS jenjang,IF(f.fakultas is NULL, \'-\',f.fakultas) AS fakultas
                             FROM prodi p
                             LEFT OUTER JOIN jenjang j ON p.jenjang_id = j.id
                             LEFT OUTER JOIN fakultas f ON p.fakultas_id = f.id

@@ -39,8 +39,8 @@ use App\Http\Controllers\Pembayaran\SklController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/', function () {
-//     return view('masteraak-page');
+// Route::get('/sk', function () {
+//     return view('print-sk');
 // });
 Route::get('/', [LandingPageController::class, 'index'])->name('homepage');
 Route::get('pengumuman', [PengumumanPageController::class, 'index'])->name('pengumuman');

@@ -109,7 +109,7 @@
                         <td width="50%">
                             <div style="text-align: right;">
                                 <p style="text-align: left; padding-left:100px;">Gresik, {{ $tanggal }}</p>
-                                <img style="width: 70%" src="{{ asset('unigres/images/ttd-surat.jpg') }}" alt="" srcset="">
+                                <img style="width: 70%" src="{{ asset('unigres/images/ttd-surat.png') }}" alt="" srcset="">
                             </div>
                         </td>
                     </tr>        

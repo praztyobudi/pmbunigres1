@@ -24,6 +24,7 @@ class CreatePembayaranTable extends Migration
             $table->enum('kategori', ['registrasi', 'daftar_ulang']);
             $table->string('no_surat')->nullable()->default(null);
             $table->string('file_bukti')->nullable()->default(null);
+            $table->timestamp('dibayar_pada')->nullable()->default(null);
             $table->timestamps();
         });
     }

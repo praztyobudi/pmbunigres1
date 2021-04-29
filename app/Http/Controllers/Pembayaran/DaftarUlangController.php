@@ -24,13 +24,11 @@ class DaftarUlangController extends Controller
                 if( !is_null($pembayaran)) {
                     if(checkBrivaStatus($pembayaran)) {
                         $pembayaran->status = true;
+                        $pembayaran->dibayar_pada = now();
                         $pembayaran->save();
 
                         return response()->redirectToRoute('home');
                     }
-                }
-                if(!$user->kelas->biaya_daftar_ulang && bypassPembayaran($user->id, true)) {
-                    return response()->redirectToRoute('home');
                 }
 
                 return $next($request);

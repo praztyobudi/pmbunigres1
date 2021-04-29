@@ -126,6 +126,15 @@ class User extends Authenticatable implements MustVerifyEmail
         ])->first();
     }
 
+    public function getBiayaDaftarUlangAttribute(){
+        return Biaya::where([
+            ['kelas_id', $this->kelas_id],
+            ['gelombang_id', $this->gelombang_id],
+            ['jalur_masuk_id', $this->jalur_masuk_id],
+            ['hijab', $this->biodata->hijab]
+        ])->first();
+    }
+
     public function biaya() {
         return $biaya = Biaya::where([
                 ['kelas_id', $this->kelas_id],

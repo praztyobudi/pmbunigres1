@@ -68,7 +68,8 @@ function checkBrivaStatus($pembayaran) {
     }
 }
 
-function generateNIM($prodi_id){
+function generateNIM($prodi_id): string
+{
     $count = User::whereHas('pembayaran', function($query){
         return $query->where([
             ['kategori', 'daftar_ulang'],
@@ -83,7 +84,8 @@ function generateNIM($prodi_id){
     return $nim;
 }
 
-function nomorSurat(){
+function nomorSurat(): string
+{
     $tahun = Carbon::today()->year;
     $count = Pembayaran::where('kategori', 'daftar_ulang')->whereYear('created_at', $tahun)->count();
     $seq = substr(str_repeat(0, 3).$count, - 3);
@@ -91,36 +93,7 @@ function nomorSurat(){
     return $seq . '/PAN-PMB/' . $tahun;
 }
 
-function bypassPembayaran($userId, $kategori = false){
-    // kategori false = registrasi, true = daftar ulang
-    $kategori = ($kategori) ? 'daftar_ulang' : 'registrasi';
-
-    $pembayaran = Pembayaran::where([
-        ['user_id', $userId],
-        ['kategori', $kategori]
-    ])->first();
-
-    try {
-        if(is_null($pembayaran)){
-            Pembayaran::create([
-                'user_id' => $userId,
-                'kategori' => $kategori,
-                'custCode' => '000000',
-                'amount' => '0',
-                'expiredDate' => Carbon::now(),
-                'status' => 1
-            ]);
-        } else{
-            $pembayaran->status = 1;
-            $pembayaran->save();
-        }
-
-        return true;
-    }catch (\Exception $e){
-        dd($e->getMessage());
-    }
-}
-
-function getBrivaErrorMessage($code) {
+function getBrivaErrorMessage($code): string
+{
     return ERRORMESSAGE[$code];
 }

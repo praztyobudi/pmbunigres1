@@ -2,9 +2,9 @@
 
 namespace App\Http\Middleware;
 
+use Carbon\Carbon;
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
 
 class PaidRegistration
 {
@@ -22,13 +22,11 @@ class PaidRegistration
         $pembayaran = $user->pembayaranRegistrasi();
 
         if(is_null($pembayaran) ) {
-            if(!$user->kelas->biaya_registrasi && bypassPembayaran($user->id, false)) {
-                return response()->redirectToRoute('biodata.create');
-            }
             return response()->redirectToRoute('instruksi-bayar');
         } else if(!$pembayaran->status) {
             if(checkBrivaStatus($pembayaran)) {
                 $pembayaran->status = true;
+                $pembayaran->dibayar_pada = now();
                 $pembayaran->save();
             } else {
                 return response()->redirectToRoute('instruksi-bayar');

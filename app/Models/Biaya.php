@@ -13,8 +13,8 @@ class Biaya extends Model
 
     protected $fillable = [
         'gelombang_id', 'jalur_masuk_id', 'kelas_id', 'biaya_registrasi',
-        'dana_pengembangan', 'dana_kemahasiswaan', 'heregistrasi', 'spp_semester',
-        'seragam','konversi','total_daftar_ulang'
+        'dana_pengembangan', 'dana_kemahasiswaan', 'buku_pedoman_akademik', 'buku_pedoman_kompetensi',
+        'seragam','hijab','total_daftar_ulang'
     ];
 
     public function gelombang() {

@@ -17,20 +17,10 @@ class JenjangSeeder extends Seeder
     {
         $data = [
             [
-                'nama'          => 'Sarjana',
+                'nama'          => 'Diploma 3',
                 'created_at'    => Carbon::now(),
                 'updated_at'    => Carbon::now(),
-            ],
-            [
-                'nama'          => 'Pascasarjana',
-                'created_at'    => Carbon::now(),
-                'updated_at'    => Carbon::now(),
-            ],
-            [
-                'nama'          => 'Profesi',
-                'created_at'    => Carbon::now(),
-                'updated_at'    => Carbon::now(),
-            ],
+            ]
         ];
 
         Jenjang::insert($data);

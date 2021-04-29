@@ -17,32 +17,7 @@ class FakultasSeeder extends Seeder
     {
         $data = [
             [
-                'fakultas' => 'Fakultas Hukum',
-                'created_at'    => Carbon::now(),
-                'updated_at'    => Carbon::now(),
-            ],
-            [
-                'fakultas' => 'Fakultas Ekonomi',
-                'created_at'    => Carbon::now(),
-                'updated_at'    => Carbon::now(),
-            ],
-            [
-                'fakultas' => 'Fakultas Teknik',
-                'created_at'    => Carbon::now(),
-                'updated_at'    => Carbon::now(),
-            ],
-            [
-                'fakultas' => 'Fakultas Keguruan dan Ilmu Pendidikan',
-                'created_at'    => Carbon::now(),
-                'updated_at'    => Carbon::now(),
-            ],
-            [
-                'fakultas' => 'Fakultas Sastra',
-                'created_at'    => Carbon::now(),
-                'updated_at'    => Carbon::now(),
-            ],
-            [
-                'fakultas' => 'Fakultas Ilmu Kesehatan',
+                'fakultas' => 'Analis Kesehatan',
                 'created_at'    => Carbon::now(),
                 'updated_at'    => Carbon::now(),
             ]

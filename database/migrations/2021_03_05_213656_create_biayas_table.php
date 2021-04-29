@@ -21,11 +21,11 @@ class CreateBiayasTable extends Migration
             $table->double('biaya_registrasi')->default(0);
             $table->double('dana_pengembangan')->default(0);
             $table->double('dana_kemahasiswaan')->default(0);
-            $table->double('heregistrasi')->default(0);
-            $table->double('spp_semester')->default(0);
+            $table->double('buku_pedoman_akademik')->default(0);
+            $table->double('buku_pedoman_kompetensi')->default(0);
             $table->double('seragam')->default(0);
-            $table->double('konversi')->default(0);
             $table->double('total_daftar_ulang')->default(0);
+            $table->boolean('hijab')->default(false);
             $table->timestamps();
         });
     }

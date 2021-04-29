@@ -25,6 +25,7 @@ class CreateBiodataTable extends Migration
             $table->date('tanggal_lahir');
             $table->enum('agama', ['islam', 'kristen', 'katholik', 'hindu', 'budha', 'konghucu']);
             $table->enum('jenis_kelamin', ['laki-laki', 'perempuan']);
+            $table->boolean('hijab')->default(false);
             $table->string('alamat')->nullable(true);
             $table->string('no_telepon')->nullable(true);
             $table->string('asal_sekolah');

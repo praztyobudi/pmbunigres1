@@ -19,7 +19,8 @@ class Pembayaran extends Model
         'expiredDate',
         'status',
         'kategori',
-        'no_surat'
+        'no_surat',
+        'file_bukti'
     ];
 
     protected $casts = [

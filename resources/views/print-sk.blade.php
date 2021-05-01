@@ -50,7 +50,7 @@
                 <p class="text-center h4"><strong>SURAT KETERANGAN</strong></p>
                 <p class="text-center">NO : {{ $pembayaran->no_surat }}</p>
                 <p>
-                Berdasarkan hasil seleksi Penerimaan Mahasiswa Baru Universitas Gresik, dengan ini diputuskan bahwa calon mahasiswa :
+                Berdasarkan hasil seleksi Penerimaan Mahasiswa Baru AAK Delima Husada Gresik, dengan ini diputuskan bahwa calon mahasiswa :
                 </p>
                 <table width="100%" cellspacing="0" cellpadding="0">
                     <tbody>
@@ -74,31 +74,30 @@
                             <td width="5%">&nbsp;:&nbsp;</td>
                             <td>{{ $gelombang->gelombang }}</td>
                         </tr>
-                    </tbody>     
+                    </tbody>
                 </table>
                 <br>
-                <p>Dinyatakan <strong>DITERIMA</strong>, sebagai mahasiswa Universitas Gresik, Tahun Akademik 2021/2022, Selanjutnya agar melakukan heregistrasi dengan rincian pembayaran sebagai berikut :</p>
+                <p>Dinyatakan <strong>DITERIMA</strong>, sebagai mahasiswa AAK Delima Husada Gresik, Tahun Akademik
+                    {{ (\Carbon\Carbon::today()->year . '/') . (\Carbon\Carbon::today()->year+1) }}, Selanjutnya agar melakukan heregistrasi dengan rincian pembayaran sebagai berikut :</p>
                 <table class="myTable" width="100%" cellspacing="0" cellpadding="0">
                     <thead>
                     <tr>
-                        <th class="text-center">Heregistrasi</th>
                         <th class="text-center">Dana Kemahasiswaan</th>
-                        <th class="text-center">Dana Pengembangan (Pembayaran ke -1)</th>
-                        <th class="text-center">SPP Semester I (3 Bulan)</th>
+                        <th class="text-center">Dana Pengembangan (Tahap 1)</th>
+                        <th class="text-center">Buku PA (Pedoman Akademik)</th>
+                        <th class="text-center">Buku PK (Pedoman Kompetensi)</th>
                         <th class="text-center">Seragam</th>
-                        <th class="text-center">Konversi</th>
                         <th class="text-center">Total</th>
                     </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>{{ number_format($biaya->heregistrasi, 0, '', '.') }},-</td>
-                            <td>{{ number_format($biaya->dana_kemahasiswaan, 0, '', '.') }},-</td>
-                            <td>{{ number_format($biaya->dana_pengembangan, 0, '', '.') }},-</td>
-                            <td>{{ number_format($biaya->spp_semester, 0, '', '.') }},-</td>
-                            <td>{{ number_format($biaya->seragam, 0, '', '.') }},-</td>
-                            <td>{{ number_format($biaya->konversi, 0, '', '.') }},-</td>
-                            <td>{{ number_format($biaya->total_daftar_ulang, 0, '', '.') }},-</td>
+                            <td>Rp. {{ number_format($biaya->dana_kemahasiswaan, 0, '', '.') }}</td>
+                            <td>Rp. {{ number_format($biaya->dana_pengembangan, 0, '', '.') }}</td>
+                            <td>Rp. {{ number_format($biaya->buku_pedoman_akademik, 0, '', '.') }}</td>
+                            <td>Rp. {{ number_format($biaya->buku_pedoman_kompetensi, 0, '', '.') }}</td>
+                            <td>Rp. {{ number_format($biaya->seragam, 0, '', '.') }}</td>
+                            <td>Rp. {{ number_format($biaya->total_daftar_ulang, 0, '', '.') }}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -112,10 +111,10 @@
                                 <img style="width: 70%" src="{{ asset('unigres/images/ttd-surat.png') }}" alt="" srcset="">
                             </div>
                         </td>
-                    </tr>        
-                </table>    
+                    </tr>
+                </table>
             </div>
         </div>
-    </div>    
+    </div>
 </body>
 </html>

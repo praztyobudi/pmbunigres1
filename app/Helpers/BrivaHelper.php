@@ -90,7 +90,7 @@ function nomorSurat(): string
     $count = Pembayaran::where('kategori', 'daftar_ulang')->whereYear('created_at', $tahun)->count();
     $seq = substr(str_repeat(0, 3).$count, - 3);
 
-    return $seq . '/PAN-PMB/' . $tahun;
+    return $seq . '/PMB/AAK-DHG/V/' . $tahun;
 }
 
 function getBrivaErrorMessage($code): string

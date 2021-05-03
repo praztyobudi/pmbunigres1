@@ -99,7 +99,7 @@
     <section class="content">
         <div class="container">
             <h5 class="title-1 sm-title">Penerimaan Mahasiswa Baru</h5>
-            <h3 class="title-2 mb-3">Akademi Analisis Kesehatan Delima Husada</h3>
+            <h3 class="title-2 mb-3">Akademi Analis Kesehatan Delima Husada</h3>
             <p class="title-desc mb-5">Untuk mendaftarakan diri pilih Menu Pendaftaran, dan untuk informasi lebih lanjut
                 mengenai program perkuliahan, biaya administrasi dll kunjungi website resmi <a href="#"><br
                         class="d-md-none d-sm-block">klik disini.</a></p>
@@ -118,7 +118,7 @@
                 <i class="fa fa-circle ml-3 mr-3"></i>
                 <p>Telp.(031) 3981918, 3978628</p>
                 <i class="fa fa-circle ml-3 mr-3"></i>
-                <p class="copy-right mb-0">Copyright © 2019 Universitas Gresik</p>
+                <p class="copy-right mb-0">Copyright © 2019 AAK Delima Husada</p>
             </div>
 
         </div>

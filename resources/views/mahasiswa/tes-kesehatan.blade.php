@@ -58,12 +58,12 @@
                     <div class="col-md-3"></div>
                     @if(auth()->user()->tes_kesehatan && !is_null(auth()->user()->tes_kesehatan_at))
                         <div class="col-md-6 center">
-                            <h5>Hasil tes kesehatan anda telah direkam. Lakukan daftar ulang untuk menyelesaikan proses pendaftaran.</h5>
+                            <h5>Selamat anda dinyatakan lulus tes kesehatan. Lakukan daftar ulang untuk menyelesaikan proses pendaftaran.</h5>
                             <a href="{{ route('daftar-ulang') }}" class="btn btn-primary center">Lanjutkan ke daftar ulang</a>
                         </div>
                     @elseif(!auth()->user()->tes_kesehatan && !is_null(auth()->user()->tes_kesehatan_at))
                         <div class="col-md-6 center">
-                            <h5>Mohon maaf anda tidak lolos sebagai calon camaba unigres, karena anda tidak memenuhi kriteria.</h5>
+                            <h5>Mohon maaf anda tidak lolos sebagai calon camaba AAK Delima Husada, karena anda tidak memenuhi kriteria.</h5>
                         </div>
                     @elseif(is_null(auth()->user()->moodleAccount->nilai_tpa))
                         <div class="col-md-6 center text-center">

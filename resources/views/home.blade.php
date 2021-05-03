@@ -33,7 +33,7 @@
 <div class="info-pengumuman">
     <div class="container">
         <h4 class="title-info-pengumuman">Informasi dan Pengumuman</h4>
-        <p class="title-info-pengumuman2">Informasi seputar seleksi ujian masuk Universitas Gresik</p>
+        <p class="title-info-pengumuman2">Informasi seputar seleksi ujian masuk AAK Delima Husada</p>
         <div class="wp-info-pengumuman">
             @if(session('status'))
                 <div class="alert alert-success">
@@ -65,7 +65,7 @@
                         <h5 class="text-center mt-2">{{ auth()->user()->biodata->nim ?? '' }}</h5>
                     </div>
                     <p class="text-center"><small>Gunakan NIM sebagai user dan password untuk login ke</small></p>
-                    <p class="text-center"><small><a href="http://siakad.unigres.ac.id/" class="text-bold">Sistem Informasi Akademik</a></small></p>
+                    <p class="text-center"><small><a href="https://aakdelimahusadagresik.ac.id/" class="text-bold">Sistem Informasi Akademik</a></small></p>
                 </div>
                 @endif
             </div>

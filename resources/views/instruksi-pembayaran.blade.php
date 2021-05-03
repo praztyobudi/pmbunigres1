@@ -56,7 +56,7 @@
                 <ol>
                   <li>Masukkan kartu debit BRI dan PIN anda.</li>
                   <li>pilih menu transaksi lain > pembayaran > lainnya > BRIVA</li>
-                  <li>masukan 5 angka kode perusahaan untuk Universitas gresik (10004) dan NRP/NIM (contoh: 1004 2020010032)</li>
+                  <li>masukan 5 angka kode perusahaan untuk AAK Delima Husada (10004) dan NRP/NIM (contoh: 1004 2020010032)</li>
                   <li>di halaman konfirmasi, pastikan detil pembayaran sesuai seperti nomor BRIVA, Nama Mahasiswa dan jumlah pembayaran.</li>
                   <li>Ikuti instruksi untuk menyelesaikan transaksi.</li>
                   <li>simpan struk transaksi sebagai bukti pembayaran.</li>
@@ -75,7 +75,7 @@
                 <ol>
                   <li>Masukkan kartu debit BRI dan PIN anda.</li>
                   <li>pilih menu transaksi lain > pembayaran > lainnya > BRIVA</li>
-                  <li>masukan 5 angka kode perusahaan untuk Universitas gresik (10004) dan NRP/NIM (contoh: 1004 2020010032)</li>
+                  <li>masukan 5 angka kode perusahaan untuk AAK Delima Husada (10004) dan NRP/NIM (contoh: 1004 2020010032)</li>
                   <li>di halaman konfirmasi, pastikan detil pembayaran sesuai seperti nomor BRIVA, Nama Mahasiswa dan jumlah pembayaran.</li>
                   <li>Ikuti instruksi untuk menyelesaikan transaksi.</li>
                   <li>simpan struk transaksi sebagai bukti pembayaran.</li>

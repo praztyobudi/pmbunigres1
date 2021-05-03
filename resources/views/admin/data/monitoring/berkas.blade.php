@@ -190,7 +190,7 @@
 </main>
 <footer class="dashboard">
     <ul class="wrapper-footer">
-        <li>Copyright © 2019 Universitas Gresik</li>
+        <li>Copyright © 2019 AAK Delima Husada</li>
         <li>Jl. Arif Rahman Hakim 2B, Gresik</li>
         <li>Telp.(031) 3981918, 3978628</li>
     </ul>

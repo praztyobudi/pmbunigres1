@@ -268,7 +268,7 @@
                                         @enderror
                                     </div>
                                     <div class="col-lg-6">
-                                        <label for="asal_informasi" id="asal_informasi_label">Sosial Media Asal Informasi</label>
+                                        <label for="asal_informasi" id="asal_informasi_label">Asal Informasi</label>
                                         <input type="text" name="asal_informasi" id="asal_informasi" class="form-control @error('asal_informasi') is-invalid @enderror" value="{{ $data->asal_informasi ?? old('asal_informasi') }}" required>
                                         @error('asal_informasi')
                                         <div class="invalid-feedback">
@@ -309,8 +309,8 @@
                                       </div>
                                 </div>
                                 <span class="text-left">
-                                    <label class="mt-4">Foto background biru, kemeja warna putih, bagi
-                                        perempuan berhijab memakai kerudung hitam.</label>
+                                    <label class="mt-4">Foto background merah, kemeja warna putih, bagi
+                                        perempuan berhijab memakai kerudung putih.</label>
                                     <label class="mt-4">Format file: JPEG, JPG, PNG</label>
                                     <label class="mt-0">Ukuran file maksimal: 250kb</label>
                                 </span>

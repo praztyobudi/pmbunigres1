@@ -28,7 +28,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ route('homepage') }}"><img src="{{ asset('aak/images/logo.png') }}" width="38px" alt="">
+            <a class="navbar-brand" href="{{ route('homepage') }}"><img src="{{ asset('aak/images/logo.png') }}"
+                    width="38px" alt="">
                 <p class="wrap"> PMB <span>AAK Delima Husada</span></p>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -39,7 +40,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ route('homepage') }}">Beranda <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{{ route('homepage') }}">Beranda <span
+                                class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('pengumuman') }}">Pengumuman</a>
@@ -47,17 +49,43 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('kontak') }}">Kontak</a>
                     </li>
+                    @if (!Auth::check())
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('register') }}">Pendaftaran</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link login" href="{{ route('login') }}">Login <i class="fa fa-sign-in"></i></a>
                     </li>
+                    @else
+                    @if (auth()->user()->permission_id == 2)
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Biodata</a>
+                    </li>
+                    @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.monitoring.pendaftar.index') }}">Halaman Admin</a>
+                    </li>
+                    @endif
+                    <div class="dropdown">
+                        <button class="nav-link btn login dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ auth()->user()->nama }}
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item " href="#"
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{__('logout')}}</a>
+                        </div>
+                    </div>
+                    </li>
+                    @endif
                 </ul>
             </div>
             @show
         </div>
     </nav>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+        @csrf
+    </form>
     @section('content-aak')
     <div class="decor">
         <div class="container ct-t">
@@ -76,7 +104,8 @@
                 mengenai program perkuliahan, biaya administrasi dll kunjungi website resmi <a href="#"><br
                         class="d-md-none d-sm-block">klik disini.</a></p>
             <div class="wrapper-button">
-                <a href="{{ route('register') }}" class="btn btn-light btn-home">Pendaftaran <i class="fa fa-copy ml-4"></i></a>
+                <a href="{{ route('register') }}" class="btn btn-light btn-home">Pendaftaran <i
+                        class="fa fa-copy ml-4"></i></a>
                 <a href="#" class="btn btn-light btn-home">Website Resmi <i class="fa fa-globe ml-4"></i></a>
             </div>
         </div>
@@ -96,19 +125,21 @@
     </footer>
 
 
-    
-    {{-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script> --}}
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+
+
+    <script src='{{ asset('aak/js/app.js') }}' type="text/javascript"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <!-- bxSlider Plugin -->
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <script src='{{ asset('aak/js/app.js') }}' type="text/javascript"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> --}}
 
 </body>
 

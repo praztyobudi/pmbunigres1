@@ -13,12 +13,35 @@
         <li class="nav-item active">
             <a class="nav-link" href="{{ route('kontak') }}">Kontak</a>
         </li>
+        @if (!Auth::check())
         <li class="nav-item">
             <a class="nav-link" href="{{ route('register') }}">Pendaftaran</a>
         </li>
         <li class="nav-item">
             <a class="nav-link login" href="{{ route('login') }}">Login <i class="fa fa-sign-in"></i></a>
         </li>
+        @else
+        @if (auth()->user()->permission_id == 2)
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('login') }}">Biodata</a>
+        </li>
+        @else
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.monitoring.pendaftar.index') }}">Halaman Admin</a>
+        </li>
+        @endif
+        <div class="dropdown">
+            <button class="nav-link btn login dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ auth()->user()->nama }}
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item " href="#"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{__('logout')}}</a>
+            </div>
+        </div>
+        </li>
+        @endif
     </ul>
 </div>
 @endsection

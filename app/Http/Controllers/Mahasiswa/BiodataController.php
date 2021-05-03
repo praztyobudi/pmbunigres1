@@ -92,12 +92,17 @@ class BiodataController extends Controller
 
     public function generateRegistrationNumber(): string
     {
-        $count = Biodata::whereDate('created_at', Carbon::today())->count();
-        $number = $count + 1;
-        $date = date_format(Carbon::today(), 'ymd');
-        $seq = substr(str_repeat(0, 4).$number, - 4);
+        $biodata = Biodata::where('user_id', auth()->user()->id)->first();
+        if (is_null($biodata)){
+            $count = Biodata::whereDate('created_at', Carbon::today())->count();
+            $number = $count + 1;
+            $date = date_format(Carbon::today(), 'ymd');
+            $seq = substr(str_repeat(0, 4) . $number, -4);
 
-        return $date . $seq;
+            return $date . $seq;
+        } else {
+            return $biodata->no_pendaftaran;
+        }
     }
 
     public function getJalurMasuk() {

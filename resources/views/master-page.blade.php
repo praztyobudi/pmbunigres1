@@ -11,9 +11,9 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    
+
     <link href="{{ asset('unigres/css/main.css') }}" rel="stylesheet"/>
     <link href="{{ asset('unigres/css/responsive.css') }}" rel="stylesheet"/>
 
@@ -241,7 +241,7 @@
     @show
 
     @yield('content')
-      
+
     <div class="modal" tabindex="-1">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
@@ -271,13 +271,13 @@
             <li>Copyright © 2019 AAK Delima Husada</li>
             <li>Jl. Arif Rahman Hakim 2B, Gresik</li>
             <li>Telp.(031) 3981918, 3978628</li>
-            <li>WA. 081 230 798 700</li>
+            <li>WA. 0812-3079-8700, 0856-4976-9693</li>
         </ul>
     </footer>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
 @yield('js')
-    
+
 </body>
 </html>

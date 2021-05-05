@@ -94,6 +94,7 @@
             <li>Copyright © 2019 AAK Delima Husada</li>
             <li>Jl. Arif Rahman Hakim 2B, Gresik</li>
             <li>Telp.(031) 3981918, 3978628</li>
+            <li>WA. 0812-3079-8700, 0856-4976-9693</li>
         </ul>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"

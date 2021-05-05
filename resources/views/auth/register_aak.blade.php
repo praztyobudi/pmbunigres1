@@ -141,7 +141,7 @@
 </section>
 
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
     ucwords = (str) => {
         return (str + '').replace(/^([a-z])|\s+([a-z])/g, function ($1) {

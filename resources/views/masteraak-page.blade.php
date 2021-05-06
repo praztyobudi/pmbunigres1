@@ -101,8 +101,7 @@
             <h5 class="title-1 sm-title">Penerimaan Mahasiswa Baru</h5>
             <h3 class="title-2 mb-3">Akademi Analis Kesehatan Delima Husada</h3>
             <p class="title-desc mb-5">Untuk mendaftarakan diri pilih Menu Pendaftaran, dan untuk informasi lebih lanjut
-                mengenai program perkuliahan, biaya administrasi dll kunjungi website resmi <a href="#"><br
-                        class="d-md-none d-sm-block">klik disini.</a></p>
+                mengenai program perkuliahan, biaya administrasi dll kunjungi website resmi</p>
             <div class="wrapper-button">
                 <a href="{{ route('register') }}" class="btn btn-light btn-home">Pendaftaran <i
                         class="fa fa-copy ml-4"></i></a>

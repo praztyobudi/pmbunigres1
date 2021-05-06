@@ -65,7 +65,7 @@
                         <h5 class="text-center mt-2">{{ auth()->user()->biodata->nim ?? '' }}</h5>
                     </div>
                     <p class="text-center"><small>Gunakan NIM sebagai user dan password untuk login ke</small></p>
-                    <p class="text-center"><small><a href="https://aakdelimahusadagresik.ac.id/" class="text-bold">Sistem Informasi Akademik</a></small></p>
+                    <p class="text-center"><small><a href="https://siakad.aakdelimahusadagresik.ac.id/" class="text-bold">Sistem Informasi Akademik</a></small></p>
                 </div>
                 @endif
             </div>

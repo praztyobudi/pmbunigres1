@@ -110,6 +110,30 @@
         </div>
     </section>
     @show
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Alur PMB</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <img src="{{ asset('unigres/images/alur-pmb.jpg') }}" class="img-fluid" alt="alur-pmb-unigres-2021">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="{{ asset('unigres/images/alur-pmb.jpg') }}" target="_blank" type="button" class="btn btn-primary">Lihat</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="bottom">
         <div class="container">
             <div class="wrapper-row">
@@ -127,7 +151,6 @@
 
 
     <script src='{{ asset('aak/js/app.js') }}' type="text/javascript"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -136,6 +159,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
     <!-- bxSlider Plugin -->
     {{-- <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> --}}
 

@@ -110,28 +110,30 @@
         </div>
     </section>
     @show
-    <div class="modal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Alur PMB</h5>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col">
-                                <img src="{{ asset('unigres/images/alur-pmb.jpg') }}" class="img-fluid" alt="alur-pmb-unigres-2021">
+    @if(Route::currentRouteName() == 'homepage')
+        <div class="modal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Alur PMB</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="{{ asset('unigres/images/alur-pmb.jpg') }}" class="img-fluid" alt="alur-pmb-unigres-2021">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <a href="{{ asset('unigres/images/alur-pmb.jpg') }}" target="_blank" type="button" class="btn btn-primary">Lihat</a>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
+                    <div class="modal-footer">
+                        <a href="{{ asset('unigres/images/alur-pmb.jpg') }}" target="_blank" type="button" class="btn btn-primary">Lihat</a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    @endif
 
     <footer class="bottom">
         <div class="container">

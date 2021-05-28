@@ -46,7 +46,7 @@ class DaftarUlangController extends Controller
             ['kategori', 'daftar_ulang']
         ])->first();
         if(is_null($data)) {
-            $biaya = $user->biaya();
+            $biaya = $user->biaya_daftar_ulang;
             $token = getToken();
             $timestamp = gmdate("Y-m-d\TH:i:s.000\Z");
 

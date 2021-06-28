@@ -153,8 +153,8 @@
                                 <div class="form-group d-none" id="hijab">
                                     <label for="hijab" class="ml-2">Orientasi Seragam</label>
                                     <select name="hijab" id="hijab" class="mb-0 form-control @error('hijab') is-invalid @enderror">
-                                        <option value="false" selected>Tidak Berhijab</option>
-                                        <option value="true">Berhijab</option>
+                                        <option value="0" selected>Tidak Berhijab</option>
+                                        <option value="1">Berhijab</option>
                                     </select>
                                     <div class="mb-2">
                                         <small style="font-size: .70em" class="form-text text-muted">Digunakan untuk menentukan seragam.</small>

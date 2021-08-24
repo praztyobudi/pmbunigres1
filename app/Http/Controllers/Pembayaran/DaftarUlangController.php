@@ -61,7 +61,7 @@ class DaftarUlangController extends Controller
                 'custCode' => $custCode,
                 'nama' => auth()->user()->nama,
                 'amount' => $biaya->total_daftar_ulang,
-                'keterangan' => 'Daftar Ulang PMB Unigres',
+                'keterangan' => 'Daftar Ulang PMB AAK Delima Husada Gresik',
                 'expiredDate' => $expDate
             ];
             $payload = json_encode($data);
@@ -82,7 +82,7 @@ class DaftarUlangController extends Controller
                         'user_id' => auth()->user()->id,
                         'custCode' => $custCode,
                         'amount' => $biaya->total_daftar_ulang,
-                        'keterangan' => 'Daftar Ulang PMB Unigres',
+                        'keterangan' => 'Daftar Ulang PMB AAK Delima Husada Gresik',
                         'expiredDate' => $expDate,
                         'status' => false,
                         'kategori' => 'daftar_ulang',
@@ -100,7 +100,7 @@ class DaftarUlangController extends Controller
                         'kategori' => 'daftar_ulang',
                         'custCode' => $response->data->custCode,
                         'amount' => $response->data->amount,
-                        'keterangan' => 'Daftar Ulang PMB Unigres',
+                        'keterangan' => 'Daftar Ulang PMB AAK Delima Husada Gresik',
                         'expiredDate' => $response->data->expiredDate,
                         'status' => false,
                         'no_surat' => $this->nomorSurat()

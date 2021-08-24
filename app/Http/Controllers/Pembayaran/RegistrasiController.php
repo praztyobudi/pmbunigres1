@@ -56,7 +56,7 @@ class RegistrasiController extends Controller
                 'custCode' => $custCode,
                 'nama' => auth()->user()->nama,
                 'amount' => $biaya->biaya_registrasi,
-                'keterangan' => 'Pendaftaran PMB Unigres',
+                'keterangan' => 'Pendaftaran PMB AAK Delima Husada Gresik',
                 'expiredDate' => $expDate
             ];
             $payload = json_encode($data);
@@ -78,7 +78,7 @@ class RegistrasiController extends Controller
                         'user_id' => auth()->user()->id,
                         'custCode' => $custCode,
                         'amount' => $biaya->biaya_registrasi,
-                        'keterangan' => 'Pendaftaran PMB Unigres',
+                        'keterangan' => 'Pendaftaran PMB AAK Delima Husada Gresik',
                         'expiredDate' => $expDate,
                         'status' => false,
                         'kategori' => 'registrasi'
@@ -94,7 +94,7 @@ class RegistrasiController extends Controller
                         ['user_id' => auth()->user()->id], [
                         'custCode' => $response->data->custCode,
                         'amount' => $response->data->amount,
-                        'keterangan' => 'Pendaftaran PMB Unigres',
+                        'keterangan' => 'Pendaftaran PMB AAK Delima Husada Gresik',
                         'expiredDate' => $response->data->expiredDate,
                         'status' => false,
                         'kategori' => 'registrasi'

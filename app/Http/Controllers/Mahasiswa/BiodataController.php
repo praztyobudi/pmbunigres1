@@ -44,7 +44,6 @@ class BiodataController extends Controller
             'current_foto' => 'present',
             'informasi' => 'required|in:sosial_media,teman_saudara,lainnya',
             'asal_informasi' => 'required|string',
-            'hijab' => 'required_if:jenis_kelamin,perempuan'
         ]);
         try {
             $berkas = $request->file('foto');

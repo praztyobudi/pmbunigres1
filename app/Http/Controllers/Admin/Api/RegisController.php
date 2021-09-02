@@ -11,6 +11,11 @@ use Carbon\Carbon;
 
 class RegisController extends Controller
 {
+    public function get_gelombang(){
+        $data = Gelombang::whereYear('tgl_mulai', Carbon::now()->year)->get();
+
+        return $data;
+    }
     public function get_prodi(){
         $data = DB::select('SELECT p.id,p.nama AS prodi,j.nama AS jenjang,f.fakultas
                             FROM prodi p

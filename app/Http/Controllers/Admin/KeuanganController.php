@@ -39,7 +39,9 @@ class KeuanganController extends Controller
                 'BRI-Signature' => $signature,
                 'BRI-Timestamp' => $timestamp
             ])->withToken($token)->get($url);
+
             $response = json_decode($res->body());
+
             if ($response->status && (isset($response->data) && $response->responseCode == '00')) {
                 $data = $response->data;
 

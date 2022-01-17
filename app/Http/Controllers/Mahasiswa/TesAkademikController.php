@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Mahasiswa;
 
 use App\Http\Controllers\Controller;
 use App\Models\MoodleAccount;
+use App\Models\Prodi;
 use App\Models\ServerSetting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -21,18 +22,22 @@ class TesAkademikController extends Controller
     }
 
     public function index() {
-        $dataMoodle = MoodleAccount::where('user_id', auth()->user()->id)->first();
-        if(is_null($dataMoodle)) {
-            $dataMoodle = $this->createMoodleAccount();
-        }
+        $user = auth()->user();
 
-        if(is_null($dataMoodle->nilai_tpa)) {
-            $dataMoodle->nilai_tpa = $this->checkNilai($dataMoodle->moodle_user_id);
+        $dataMoodle = MoodleAccount::firstOrCreate(
+            ['user_id' => $user->id],
+            [
+                'moodle_username' => null,
+                'moodle_default_password' => null,
+                'moodle_email' => null,
+                'moodle_firstname' => null,
+                'moodle_lastname' => null,
+                'moodle_user_id' => null,
+                'nilai_tpa' => null,
+            ]
+        );
 
-            $dataMoodle->save();
-        }
-
-        $dataLink = ServerSetting::where('key', 'link_tes_tpa')->first();
+        $dataLink = (Prodi::find($user->prodi_id))->link_tpa;
 
         return response()->view('mahasiswa.tes-akademik', compact('dataMoodle', 'dataLink'));
     }
@@ -85,7 +90,7 @@ class TesAkademikController extends Controller
     public function checkNilai(int $id) {
         $moodleUrl = env('MOODLE_APP_SOCKET');
         $moodleToken = env('MOODLE_ADMIN_TOKEN');
-        $final=null;
+        $final = null;
 
         $res = Http::post($moodleUrl . "webservice/rest/server.php?wstoken=$moodleToken&wsfunction=gradereport_overview_get_course_grades&moodlewsrestformat=json&userid=$id");
         $response = json_decode($res->body());

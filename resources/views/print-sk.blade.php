@@ -108,7 +108,11 @@
                         <td width="50%">
                             <div style="text-align: right;">
                                 <p style="text-align: left; padding-left:100px;">Gresik, {{ $tanggal }}</p>
-                                <img style="width: 70%" src="{{ asset('unigres/images/ttd-surat.png') }}" alt="" srcset="">
+                                @isset($signature)
+                                    <img style="width: 70%" src="{{ \Illuminate\Support\Facades\Storage::url($signature->value)}}" alt="" srcset="">
+                                @else
+                                    <img style="width: 70%" src="{{ asset('unigres/images/ttd-surat.png') }}" alt="" srcset="">
+                                @endisset
                             </div>
                         </td>
                     </tr>

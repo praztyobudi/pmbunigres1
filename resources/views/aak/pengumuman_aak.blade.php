@@ -60,15 +60,18 @@
     <div class="container">
         <h3 class="title-1 sm-title">Pengumuman</h3>
         <p class="title-desc mb-4">Pusat informasi seputar PMB AAK Delima Husada</p>
-        @foreach ($data as $key=>$data)
+        @foreach ($data as $key=>$row)
         <div class="col-md-6 pl-0 pr-0">
             <div class="pengumuman">
                 <div class="button-group">
-                    <a href="{{ asset('storage/' . $data->file_url) }}" target="_blank" class="btn btn-outline-light">
-                        <strong>{{ $data->judul }}</strong>
-                        <span class="badge badge-success m-1">NEW</span>
-                        <p class="item-ann-title-1">{{ $data->deskripsi }}</p>
-                        <p class="item-ann-title-2">Publised by : <span>{{ $data->publish }}</span></p>
+                    <a href="{{ asset('storage/' . $row['file_url']) }}" target="_blank" class="btn btn-outline-light">
+                        <strong>{{ $row['judul'] }}</strong
+                        @if($row['is_new'])
+                            <span class="badge badge-success m-1">NEW</span>
+                        @endif
+                        <br>
+                        <p class="item-ann-title-1">{{ $row['deskripsi'] }}</p>
+                        <p class="item-ann-title-2">Publised by : <span>{{ $row['publish'] }}</span></p>
                     </a>
                 </div>
             </div>

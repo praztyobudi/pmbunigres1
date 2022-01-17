@@ -24,7 +24,7 @@ class KelasSeeder extends Seeder
                 'created_at'    => Carbon::now(),
                 'updated_at'    => Carbon::now(),
                 'tes_kesehatan' => 1,
-                'keterangan_tes_kesehatan' => null
+                'keterangan_tes_kesehatan' => '+62 856-4976-9693 (Ibu Dani)'
             ]
         ];
 

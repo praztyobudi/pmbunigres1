@@ -15,7 +15,11 @@ class CreateKelasTable extends Migration
     {
         Schema::create('kelas', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('prodi_id');
+//            $table->unsignedBigInteger('prodi_id');
+        });
+
+        Schema::table('kelas', function (Blueprint $table) {
+            $table->foreignId('prodi_id')->references('id')->on('prodi')->onUpdate('cascade')->onDelete('restrict');
             $table->string('kelas');
             $table->boolean('tes_kesehatan')->default(false);
             $table->string('keterangan_tes_kesehatan')->nullable(true);

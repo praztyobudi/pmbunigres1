@@ -18,17 +18,17 @@ class DatabaseSeeder extends Seeder
     {
         // ToDo: Tambahkan semua class seeder ke fungsi di bawah ini
         $this->call([
-            BiayaSeeder::class,
-            PermissionSeeder::class,
+            GelombangSeeder::class,
             JenjangSeeder::class,
+            PermissionSeeder::class,
             FakultasSeeder::class,
             ProdiSeeder::class,
-            GelombangSeeder::class,
-            AdminSeeder::class,
-            KelasSeeder::class,
             JalurMasukSeeder::class,
             JamMasukSeeder::class,
-            JamMasukKelasSeeder::class
+            AdminSeeder::class,
+            KelasSeeder::class,
+            JamMasukKelasSeeder::class,
+            BiayaSeeder::class,
         ]);
     }
 }

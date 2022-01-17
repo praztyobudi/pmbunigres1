@@ -31,7 +31,9 @@
                         <p class="#"><small>{{ $data->judul }}</small></p>
                         <p class="item-ann-title-1">{{ $data->deskripsi }}</p>
                         <p class="item-ann-title-2">Publised by : <span>{{ $data->publish }}</span></p>
-                        <span class="badge badge-item">NEW</span>
+                        @if($value['is_new'])
+                            <span class="badge badge-item">NEW</span>
+                        @endif
                     </div>
                 </a>
             </div>

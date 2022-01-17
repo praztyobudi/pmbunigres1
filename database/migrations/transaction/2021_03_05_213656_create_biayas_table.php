@@ -15,9 +15,12 @@ class CreateBiayasTable extends Migration
     {
         Schema::create('biayas', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('gelombang_id');
-            $table->unsignedBigInteger('jalur_masuk_id');
-            $table->unsignedBigInteger('kelas_id');
+        });
+
+        Schema::table('biayas', function (Blueprint $table) {
+            $table->foreignId('gelombang_id')->references('id')->on('gelombang')->onUpdate('cascade')->onDelete('restrict');
+            $table->foreignId('jalur_masuk_id')->references('id')->on('jalur_masuk')->onUpdate('cascade')->onDelete('restrict');
+            $table->foreignId('kelas_id')->references('id')->on('kelas')->onUpdate('cascade')->onDelete('restrict');
             $table->double('biaya_registrasi')->default(0);
             $table->double('dana_pengembangan')->default(0);
             $table->double('dana_kemahasiswaan')->default(0);

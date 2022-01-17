@@ -15,7 +15,10 @@ class CreateWaliTable extends Migration
     {
         Schema::create('wali', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('biodata_id');
+        });
+
+        Schema::table('wali', function (Blueprint $table) {
+            $table->foreignId('biodata_id')->references('id')->on('biodata')->onUpdate('cascade')->onDelete('cascade');
             $table->enum('hubungan', ['ayah', 'ibu', 'wali']);
             $table->string('nama');
             $table->enum('status', ['hidup', 'meninggal', 'cerai'])->default('hidup');

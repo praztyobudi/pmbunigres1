@@ -63,7 +63,7 @@
                     </li>
                     @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.monitoring.pendaftar.index') }}">Halaman Admin</a>
+                        <a class="nav-link" href="{{ route('administrator.index') }}">Halaman Admin</a>
                     </li>
                     @endif
                     <div class="dropdown">
@@ -111,28 +111,30 @@
     </section>
     @show
     @if(Route::currentRouteName() == 'homepage')
-        <div class="modal" tabindex="-1">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Alur PMB</h5>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col">
-                                    <img src="{{ asset('unigres/images/alur-pmb.jpg') }}" class="img-fluid" alt="alur-pmb-unigres-2021">
+        @isset($brochure)
+            <div class="modal" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Alur PMB</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="{{ asset('storage/'.$brochure->file_url) }}" class="img-fluid" alt="alur-pmb-unigres-{{ \Carbon\Carbon::now()->year }}">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="{{ asset('unigres/images/alur-pmb.jpg') }}" target="_blank" type="button" class="btn btn-primary">Lihat</a>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
+                        <div class="modal-footer">
+                            <a href="{{ asset('storage/'.$brochure->file_url) }}" target="_blank" type="button" class="btn btn-primary">Lihat</a>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keluar</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        @endisset
     @endif
 
     <footer class="bottom">

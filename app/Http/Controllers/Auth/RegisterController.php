@@ -55,7 +55,7 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
-    
+
 
     public function showRegistrationForm()
     {
@@ -78,7 +78,6 @@ class RegisterController extends Controller
             'jamMasuk' => ['required', 'exists:jam_masuk_kelas,id'],//Rule::in($jamMasukValidation)],
             'prodi' => ['required', 'exists:prodi,id'],
             'jalur_masuk' => ['required', 'integer'],//Rule::in($jalurMasukValidation)],
-            'lulusan_unigres' => ['nullable', 'boolean'],
             'kelas' => 'required|exists:kelas,id'
             ]);
         }
@@ -109,7 +108,6 @@ class RegisterController extends Controller
             'jalur_masuk_id' => $data['jalur_masuk'],
             'gelombang_id' => $gelombang->id,
             'kelas_id' => $data['kelas'],
-            'lulusan_unigres' => (empty($data['lulusan_unigres'])) ? 0 : $data['lulusan_unigres'] ,
         ]);
     }
 

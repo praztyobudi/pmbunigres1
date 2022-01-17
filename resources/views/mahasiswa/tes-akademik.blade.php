@@ -57,7 +57,7 @@
                 <div class="row gx-5">
                     <div class="col-md-6 left">
                         <h5>Link Tes Potensi Akademik</h5>
-                        <a href="{{ $dataLink->value ?? '#' }}" type="submit" class="btn btn-primary mb-5" target="_blank">Klik Disini!</a>
+                        <a href="{{ $dataLink ?? '#' }}" type="submit" class="btn btn-primary mb-5" target="_blank">Klik Disini!</a>
                         <p class="catatan">Catatan :</p>
                         <p>
                         <ol>
@@ -112,23 +112,25 @@
                                 </div>
                             </div>
                         @endif
-                        <div class="card mb-3">
-                            <div class="card-header">
-                                <h5 class="mb-0">Informasi user dan password Anda.</h5>
-                            </div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="form-group mb-3">
-                                        <label for="username">Username</label>
-                                        <input type="text" class="form-control form-control-sm" value="{{ $dataMoodle->moodle_username }}" disabled readonly>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password">Password</label>
-                                        <input type="text" class="form-control form-control-sm" value="{{ $dataMoodle->moodle_default_password }}" disabled readonly>
+                        @if(!is_null($dataMoodle->moodle_username))
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Informasi user dan password Anda.</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="form-group mb-3">
+                                            <label for="username">Username</label>
+                                            <input type="text" class="form-control form-control-sm" value="{{ $dataMoodle->moodle_username }}" disabled readonly>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input type="text" class="form-control form-control-sm" value="{{ $dataMoodle->moodle_default_password }}" disabled readonly>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        @endif
                     </div>
                 </div>
             </div>

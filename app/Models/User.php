@@ -31,7 +31,6 @@ class User extends Authenticatable implements MustVerifyEmail
         'no_telepon',
         'tes_kesehatan',
         'tes_kesehatan_at',
-        'lulusan_unigres',
     ];
 
     /**
@@ -115,24 +114,6 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function kelas() {
         return $this->belongsTo(Kelas::class, 'kelas_id', 'id');
-    }
-
-    public function getBiayaRegistrasiAttribute(){
-        return Biaya::where([
-            ['kelas_id', $this->kelas_id],
-            ['gelombang_id', $this->gelombang_id],
-            ['jalur_masuk_id', $this->jalur_masuk_id],
-            ['hijab', false]
-        ])->first();
-    }
-
-    public function getBiayaDaftarUlangAttribute(){
-        return Biaya::where([
-            ['kelas_id', $this->kelas_id],
-            ['gelombang_id', $this->gelombang_id],
-            ['jalur_masuk_id', $this->jalur_masuk_id],
-            ['hijab', $this->biodata->hijab]
-        ])->first();
     }
 
     public function biaya() {

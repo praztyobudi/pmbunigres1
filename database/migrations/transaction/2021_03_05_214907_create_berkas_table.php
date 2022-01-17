@@ -15,7 +15,10 @@ class CreateBerkasTable extends Migration
     {
         Schema::create('berkas', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+        });
+
+        Schema::table('berkas', function (Blueprint $table) {
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('ijazah')->nullable(true);
             $table->string('ktp')->nullable(true);
             $table->string('skhun')->nullable(true);

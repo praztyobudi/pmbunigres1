@@ -15,7 +15,10 @@ class CreateBiodataTable extends Migration
     {
         Schema::create('biodata', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+        });
+
+        Schema::table('biodata', function (Blueprint $table) {
+            $table->foreignId('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->string('no_pendaftaran')->unique();
             $table->string('nik')->unique();
             $table->string('nim')->nullable();
@@ -35,7 +38,6 @@ class CreateBiodataTable extends Migration
             $table->enum('ukuran_almamater', ['S', 'M', 'L', 'XL', 'XXL']);
             $table->enum('informasi', ['sosial_media', 'teman_saudara', 'lainnya'])->default('sosial_media');
             $table->string('asal_informasi');
-            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -15,7 +15,10 @@ class CreatePengumumanTable extends Migration
     {
         Schema::create('pengumuman', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('petugas_id');
+        });
+
+        Schema::table('pengumuman', function (Blueprint $table) {
+            $table->foreignId('petugas_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('restrict');
             $table->string('judul');
             $table->string('deskripsi');
             $table->string('file_url')->nullable(true);

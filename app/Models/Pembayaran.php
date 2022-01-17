@@ -28,6 +28,11 @@ class Pembayaran extends Model
         'expiredData' => 'datetime',
     ];
 
+    public function getUpdatedAtAttribute($timestamp)
+    {
+        return $timestamp;
+    }
+
     public function pendaftar() {
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
